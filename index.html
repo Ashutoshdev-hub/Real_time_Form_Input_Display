@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Form with Animations</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-container">
+        <h2><i class="fas fa-pen"></i> Input Form</h2>
+
+        <label for="subject"><i class="fas fa-heading"></i> Subject:</label>
+        <input type="text" id="subject" placeholder="Enter subject" />
+
+        <label for="member"><i class="fas fa-user-plus"></i> Add Member:</label>
+        <input type="text" id="member" placeholder="Enter member name" />
+
+        <label for="date"><i class="fas fa-calendar-alt"></i> Date:</label>
+        <input type="date" id="date" />
+
+        <label for="message"><i class="fas fa-comment"></i> Message:</label>
+        <textarea id="message" placeholder="Type your message here"></textarea>
+        <p id="charCount">0 / 200</p>
+
+        <label for="fileUpload"
+          ><i class="fas fa-paperclip"></i> Upload Attachment:</label
+        >
+        <input type="file" id="fileUpload" />
+        <p id="fileName">No file selected</p>
+
+        <button id="send">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </div>
+
+      <!-- Display Section -->
+      <div class="display-container">
+        <h2><i class="fas fa-eye"></i> Live Preview</h2>
+        <p><strong>Subject:</strong> <span id="display-subject">-</span></p>
+        <p><strong>Member:</strong> <span id="display-member">-</span></p>
+        <p><strong>Date:</strong> <span id="display-date">-</span></p>
+        <p><strong>Message:</strong> <span id="display-message">-</span></p>
+        <p><strong>Attachment:</strong> <span id="display-file">None</span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
